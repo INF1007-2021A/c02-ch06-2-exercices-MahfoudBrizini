@@ -8,13 +8,18 @@ import itertools
 
 
 def get_even_keys(dictionary):
-	return {}
 
-def join_dictionaries(dictionaries):
-	return {}
+	return {key for key in dictionary if key % 2 == 0}
 
+def join_dictionaries(dictionaries): # liste de dictionnaire 2 dictionnaire en liste et faut concatener
+
+	return{key:val for d in dictionaries for key, val in d.items() }
 def dictionary_from_lists(keys, values):
-	return {}
+	#result = {}
+	#for i in range(min(len(keys), len(values))):
+		#result[keys[i]] = values[i]
+	#for k, v in zip(keys, values):
+		return dict(zip(keys,values))
 
 def get_greatest_values(dictionnary, num_values):
 	return []
